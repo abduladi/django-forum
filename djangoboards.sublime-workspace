@@ -1,0 +1,768 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lo",
+				"login_required\tfunction"
+			],
+			[
+				"auth",
+				"auth_views\tmodule"
+			],
+			[
+				"use",
+				"userMenu"
+			],
+			[
+				"as",
+				"as_view\tfunction"
+			],
+			[
+				"aut",
+				"auth_views\tmodule"
+			],
+			[
+				"E",
+				"EmailInput\tclass"
+			],
+			[
+				"re",
+				"required"
+			],
+			[
+				"U",
+				"User"
+			],
+			[
+				"glo",
+				"globalclean\tstatement"
+			],
+			[
+				"me",
+				"method\tAttr"
+			],
+			[
+				"va",
+				"value\tAttr"
+			],
+			[
+				"UserC",
+				"UserCreationForm\tclass"
+			],
+			[
+				"a",
+				"auth\tmodule"
+			],
+			[
+				"acc",
+				"accounts_views\tmodule"
+			],
+			[
+				"tex",
+				"text-danger"
+			],
+			[
+				"Text",
+				"TextInput\tclass"
+			],
+			[
+				"boa",
+				"board_topics\tfunction"
+			],
+			[
+				"p",
+				"post"
+			],
+			[
+				"class",
+				"class\tkeyword"
+			],
+			[
+				"C",
+				"CharField\tclass"
+			],
+			[
+				"for",
+				"forms\tmodule"
+			],
+			[
+				"Mode",
+				"ModelForm\tclass"
+			],
+			[
+				"Mo",
+				"ModelForm\tModelForm"
+			],
+			[
+				"__s",
+				"__str__\tfunction"
+			],
+			[
+				"board",
+				"board_topics"
+			],
+			[
+				"boar",
+				"board"
+			],
+			[
+				"asser",
+				"assertContains\tfunction"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"cre",
+				"create"
+			],
+			[
+				"view",
+				"view\tstatement"
+			],
+			[
+				"reso",
+				"resolve\tfunction"
+			],
+			[
+				"H",
+				"Http404\tclass"
+			],
+			[
+				"tr",
+				"try\tTry/Except"
+			],
+			[
+				"get",
+				"get_object_or_404\tfunction"
+			],
+			[
+				"__",
+				"__init__\tinit"
+			],
+			[
+				"sta",
+				"status_code"
+			],
+			[
+				"cl",
+				"client"
+			],
+			[
+				"b",
+				"board_topics\tfunction"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"S",
+				"STATIC_ROOT"
+			],
+			[
+				"BA",
+				"BASE_DIR\tstatement"
+			],
+			[
+				"pa",
+				"path\tmodule"
+			],
+			[
+				"STATIC",
+				"STATIC_ROOT"
+			],
+			[
+				"ST",
+				"STATICFILES_DIRS"
+			],
+			[
+				"f",
+				"func\tstatement"
+			],
+			[
+				"c",
+				"core\tmodule"
+			],
+			[
+				"TEMP",
+				"TEMPLATE_DIRS"
+			],
+			[
+				"cone",
+				"context\tstatement"
+			],
+			[
+				"contex",
+				"context\tparam"
+			],
+			[
+				"bo",
+				"board\tstatement"
+			],
+			[
+				"m",
+				"models\tmodule"
+			],
+			[
+				"url",
+				"url\tfunction"
+			],
+			[
+				"si",
+				"site\tinstance"
+			],
+			[
+				"upda",
+				"updated_at\tstatement"
+			],
+			[
+				"creat",
+				"created_at\tstatement"
+			],
+			[
+				"max",
+				"max_length\tparam"
+			],
+			[
+				"T",
+				"True\tinstance"
+			],
+			[
+				"auto",
+				"auto_now_add\tparam"
+			],
+			[
+				"Date",
+				"DateTimeField\tclass"
+			],
+			[
+				"Model",
+				"Model\tclass"
+			],
+			[
+				"con",
+				"contrib\tmodule"
+			],
+			[
+				"I",
+				"Iyede\tclass"
+			],
+			[
+				"vi",
+				"views\tmodule"
+			],
+			[
+				"d",
+				"db\tmodule"
+			],
+			[
+				"todo",
+				"todo-item"
+			],
+			[
+				"clic",
+				"clickMsg"
+			],
+			[
+				"butt",
+				"buttonClick"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "project/urls.py",
+			"settings":
+			{
+				"buffer_size": 1301,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/base.html",
+			"settings":
+			{
+				"buffer_size": 2529,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "accounts/forms.py",
+			"settings":
+			{
+				"buffer_size": 354,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "boards/views.py",
+			"settings":
+			{
+				"buffer_size": 1959,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from django.db import models\nfrom django.contrib.auth.models import User\n\n# Create your models here.\n\n\nclass Board(models.Model):\n\tname        = models.CharField(max_length=30, unique=True)\n\tdescription = models.CharField(max_length=100)\n\n\tdef __str__(self):\n\t\treturn self.name\n\n\nclass Topic(models.Model):\n\tsubject      = models.CharField(max_length=255)\n\tlast_updated = models.DateTimeField(auto_now_add=True)\n\tboard        = models. (Board, related_name='topics')\n\tstarter      = models.ForeignKey(User, related_name='topics')\n\n\tdef __str__(self):\n\t\treturn self.subject\n\n\nclass Post(models.Model):\n\tmessage    = models.TextField(max_length=4000)\n\ttopic      = models.ForeignKey(Topic, related_name='posts')\n\tcreated_at = models.DateTimeField(auto_now_add=True)\n\tupdated_at = models.DateTimeField(null=True)\n\tcreated_by = models.ForeignKey(User, related_name='posts')\n\tupdated_by = models.ForeignKey(User, null=True, related_name='+')\n\n\tdef __str__(self):\n\t\treturn self.message",
+			"file": "boards/models.py",
+			"file_size": 988,
+			"file_write_time": 131540722980000000,
+			"settings":
+			{
+				"buffer_size": 979,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/topics.html",
+			"settings":
+			{
+				"buffer_size": 1159,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ma",
+				"Material Theme: Activate theme"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: l",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Anaconda: Display object docs"
+			],
+			[
+				"package control: r",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 496.0
+	},
+	"console":
+	{
+		"height": 143.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/abduladi/Desktop/sibtc"
+	],
+	"file_history":
+	[
+		"/Users/abduladi/Desktop/sibtc/project/settings.py",
+		"/Users/abduladi/Desktop/sibtc/boards/models.py",
+		"/Users/abduladi/Desktop/sibtc/templates/login.html",
+		"/Users/abduladi/Desktop/sibtc/accounts/views.py",
+		"/Users/abduladi/Desktop/sibtc/templates/signup.html",
+		"/Users/abduladi/Desktop/sibtc/templates/new_topic.html",
+		"/Users/abduladi/Desktop/sibtc/templates/base.html",
+		"/Users/abduladi/Desktop/sibtc/accounts/forms.py",
+		"/Users/abduladi/Desktop/sibtc/static/js/bootstrap.min.js",
+		"/Users/abduladi/Desktop/sibtc/static/js/popper.min.js",
+		"/Users/abduladi/Desktop/sibtc/boards/forms.py",
+		"/Users/abduladi/Desktop/sibtc/templates/topics.html",
+		"/Users/abduladi/Desktop/sibtc/static/js/jquery-3.2.1.min.js",
+		"/Users/abduladi/Desktop/sibtc/boards/views.py",
+		"/Users/abduladi/Desktop/sibtc/static/css/accounts.css",
+		"/Users/abduladi/Desktop/sibtc/templates/home.html",
+		"/Users/abduladi/Desktop/sibtc/venv/lib/python3.6/site-packages/widget_tweaks/templatetags/widget_tweaks.py",
+		"/Users/abduladi/Desktop/sibtc/venv/lib/python3.6/site-packages/raven/contrib/django/models.py",
+		"/Users/abduladi/Desktop/sibtc/venv/lib/python3.6/site-packages/raven/contrib/django/raven_compat/models.py",
+		"/Users/abduladi/Desktop/sibtc/static/css/app.css",
+		"/Users/abduladi/Desktop/sibtc/boards/tests.py",
+		"/Users/abduladi/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/abduladi/Desktop/sibtc/project/urls.py",
+		"/Users/abduladi/Desktop/sibtc/boards/admin.py",
+		"/Users/abduladi/Desktop/sibtc/boards/abc.py",
+		"/Users/abduladi/Desktop/sibtc/templates/boards/base.html",
+		"/Users/abduladi/Desktop/sibtc/sibtcProject"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"render",
+			"client",
+			"board_topi",
+			"lint"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "project/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1292,
+								1297
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "accounts/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								142,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "boards/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								838,
+								838
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "boards/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								436,
+								436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "templates/topics.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.anaconda_documentation":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "djangoboards.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

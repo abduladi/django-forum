@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% block title %}Start a New Topic{% endblock %}
+
+{% block breadcrumbs %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a></li>
+  <li class="breadcrumb-item active">New topic</li>
+{% endblock breadcrumbs %}
+
+{% block content %}
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+    
+    <div class="form-group">
+      <label for="id_subject">Subject</label>
+      {% render_field form.subject class='form-control'  placeholder='Topic Subject' %}
+      {% for error in form.subject.errors %}
+        <small class="text-danger">{{error}}</small>
+      {% endfor %}
+    </div>
+
+    <div class="form-group">
+      <label for="id_message">Message</label>
+      {% render_field form.message class='form-control' %}
+      
+      
+        <div class="text-danger">
+          <small>{{form.message.errors}}</small>
+        </div>
+      
+        
+        
+      <small class='form-text text-muted'>{{form.message.help_text}}</small>
+    </div>
+
+
+    <!-- basic form rendering -->
+    <!-- {{ form.as_p }} -->
+
+
+
+
+    <!-- form below handles normal form processing -->
+    <!-- <div class="form-group">
+      <label for="id_subject">Subject</label>
+      <input type="text" class="form-control" id="id_subject" name="subject">
+    </div>
+    <div class="form-group">
+      <label for="id_message">Message</label>
+      <textarea class="form-control" id="id_message" name="message" rows="5"></textarea>
+    </div> -->
+    <button type="submit" class="btn btn-success">Post</button> 
+  </form>
+
+
+{% endblock content %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+{% endblock %}
+
+{% block body %}
+  
+<div class="container">
+  	<h1 class="text-center logo my-4">
+    	<a href="{% url 'home' %}">Django Boards</a>
+    </h1>
+
+    <div class="row justify-content-center">
+    	<div class="col-lg-8 col-md-10 col-sm-12">
+    		<div class="card">
+    			<div class="card-body">
+		  			<h2>Login</h2>
+				  	<form method="post" novalidate>
+					  	{% csrf_token %}
+					  	{# {{form.as_p}} #}
+					  	{% for field in form %}
+						  	<div class="form-group">
+						      <label for="id_subject">{{ field.label_tag }}</label>
+						      {% render_field field class='form-control' %}
+						      {% for error in field.errors %}
+						      	<small class="text-danger">{{error}}</small>
+						      {% endfor %}
+						      <!-- <small class="form-text text-muted">{{ field.help_text|safe }}</small> -->
+						    </div>
+					  		
+					  	{% endfor %}
+					  	<input type="submit" name="signup" value="Sign in" class="btn btn-primary">
+					</form>
+				</div>
+				<div class="card-footer text-muted text-center">
+		        	New to the Boards? <a href="{% url 'signup' %}">Sign up</a>
+		        </div>
+			</div>
+			<div class="text-center py-2">
+	          <small>
+	            <a href="#" class="text-muted">Forgot your password?</a>
+	          </small>
+	        </div>
+		</div>
+	</div>
+</div>
+  
+{% endblock body %}
